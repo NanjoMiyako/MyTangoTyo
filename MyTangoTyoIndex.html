@@ -1,0 +1,91 @@
+<!DOCTYPE HTML>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="initial-scale=1.0, user-scalable=yes">
+<title>My単語帳</title>
+<link rel="stylesheet" href="style2.css">
+</head>
+<body>
+<script src="jquery-3.3.1.min.js"></script>
+
+<span id="ImportDataFlg"></span><br>
+
+ロードするファイルを選択:<br>
+<input type="file" id="fileOnDataImport"><br>
+<button type="button" id="ImportDataOnDataImportTab" style="margin-top:10px;" onclick="ImportDataOnDataImportTab()">
+単語帳データをロード
+
+</button><br>
+カテゴリ:<select id="QuestionCategory1" style="margin-top:10px;">
+</select>
+<button type="button" id="DicideCategoryBtn" style="margin-top:10px;" onclick="SetCategory()">
+カテゴリ決定
+</button>
+<br>
+
+<button type="button" id="RandomOutputBtn" style="margin-top:10px;" onclick="RandomQuestionOutput()">
+選択したカテゴリ内からランダムに問題出力
+</button><br>
+
+
+単語No. :
+<input type="text" id="QuestionNumberTextBox" placeholder="1">
+<br>
+<button type="button" id="NumberOutputBtn" style="margin-top:10px;" onclick="SelectNumberOutput()">
+問題番号を指定して問題出力
+</button><br>
+<button type="button" id="AnswerOutputBtn" style="margin-top:10px;" onclick="AnswerOutput1()">
+問題の解答出力
+</button><br>
+
+<button type="button" id="AddCorrectCountBtn" style="margin-top:10px;" onclick="AddCorrectCount()">正解だった!
+</button><br>
+
+正解数:<span id="CorrectCount"></span>/<span id="AllOutputCount"></span>
+<hr>
+問題<br>
+問題番号:<span id="QuestionNumber"></span><br>
+カテゴリー:<span id="QuestionCategory2"></span><br>
+<hr>
+問題文:
+<span id="QuestionText"></span><br>
+
+画像1:
+<div id="DivQuestionImg1-1"></div>
+<br>
+
+画像2:
+<div id="DivQuestionImg1-2"></div>
+<br>
+
+画像3:
+<div id="DivQuestionImg1-3"></div>
+<br>
+
+<hr>
+解説
+<hr>
+解説文:
+<span id="AnswerText"></span>
+<br>
+
+画像1:
+<div id="DivAnswerImg1-1"></div>
+<br>
+
+画像2:
+<div id="DivAnswerImg1-2"></div>
+<br>
+
+画像3:
+<div id="DivAnswerImg1-3"></div>
+<br>
+<hr>
+
+<script type="text/javascript" src="MyTangoTyoJS.js">
+</script>
+
+
+</body>
+</html>
